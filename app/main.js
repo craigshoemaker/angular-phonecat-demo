@@ -1,5 +1,17 @@
-"use strict";
-var upgrade_1 = require('@angular/upgrade');
-var upgradeAdapter = new upgrade_1.UpgradeAdapter();
-upgradeAdapter.bootstrap(document.documentElement, ['phonecatApp']);
+System.register(['@angular/upgrade'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var upgrade_1;
+    var upgradeAdapter;
+    return {
+        setters:[
+            function (upgrade_1_1) {
+                upgrade_1 = upgrade_1_1;
+            }],
+        execute: function() {
+            upgradeAdapter = new upgrade_1.UpgradeAdapter();
+            upgradeAdapter.bootstrap(document.documentElement, ['phonecatApp']);
+        }
+    }
+});
 //# sourceMappingURL=main.js.map
