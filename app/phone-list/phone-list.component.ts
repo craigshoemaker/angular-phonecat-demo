@@ -1,11 +1,13 @@
+import { Phone, PhoneData } from '../core/phone/phone.service';
+debugger;
 class PhoneListController {
-  phones: any[];
+  phones: PhoneData[];
   orderProp: string;
-  query: string;
-
-  static $inject = ['Phone'];
-  constructor(Phone: any) {
-    this.phones = Phone.query();
+  static $inject = ['phone'];
+  constructor(phone: Phone) {
+    phone.query().subscribe(phones => {
+      this.phones = phones;
+    });
     this.orderProp = 'age';
   }
 }
